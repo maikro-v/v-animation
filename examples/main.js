@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import App from './app.vue'
-import SEUI from '../src'
+import VAnimation from '../src'
 
-Vue.use(SEUI)
+Vue.use(VAnimation)
 
 Vue.config.productionTip = false
 

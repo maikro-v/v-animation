@@ -4,15 +4,16 @@
   "private": false,
   "scripts": {
     "dev": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build:example": "vue-cli-service build",
+    "build:se": "vue-cli-service build --config ./src/index.js",
     "docs": "docsify serve docs",
     "lint": "vue-cli-service lint"
   },
   "license": "ISC",
   "author": {
-    "name" : "Maikro",
-    "email" : "maikro@126.com",
-    "url" : "http://maikro.cn"
+    "name": "Maikro",
+    "email": "maikro@126.com",
+    "url": "http://maikro.cn"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
     "vue"
   ],
   "dependencies": {
+    "animate.css": "^4.1.0",
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
   },
