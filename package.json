@@ -1,12 +1,28 @@
 {
-  "name": "v-animate",
-  "version": "0.1.0",
-  "private": true,
+  "name": "v-animation",
+  "version": "0.1.1",
+  "private": false,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "docs": "docsify serve docs",
     "lint": "vue-cli-service lint"
   },
+  "license": "ISC",
+  "author": {
+    "name" : "Maikro",
+    "email" : "maikro@126.com",
+    "url" : "http://maikro.cn"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hsgzhuanyong/v-animation"
+  },
+  "keywords": [
+    "v-animation",
+    "animation",
+    "vue"
+  ],
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
