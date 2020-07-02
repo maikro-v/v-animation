@@ -1,0 +1,292 @@
+export default [{
+  name: 'bounce',
+  value: 'bounce'
+}, {
+  name: 'flash',
+  value: 'flash'
+}, {
+  name: 'pulse',
+  value: 'pulse'
+}, {
+  name: 'rubberBand',
+  value: 'rubberBand'
+}, {
+  name: 'shakeX',
+  value: 'shakeX'
+}, {
+  name: 'shakeY',
+  value: 'shakeY'
+}, {
+  name: 'headShake',
+  value: 'headShake'
+}, {
+  name: 'swing',
+  value: 'swing'
+}, {
+  name: 'tada',
+  value: 'tada'
+}, {
+  name: 'wobble',
+  value: 'wobble'
+}, {
+  name: 'jello',
+  value: 'jello'
+}, {
+  name: 'heartBeat',
+  value: 'heartBeat'
+}, {
+  name: 'backInDown',
+  value: 'backInDown'
+}, {
+  name: 'backInLeft',
+  value: 'backInLeft'
+}, {
+  name: 'backInRight',
+  value: 'backInRight'
+}, {
+  name: 'backInUp',
+  value: 'backInUp'
+}, {
+  name: 'backOutDown',
+  value: 'backOutDown'
+}, {
+  name: 'backOutLeft',
+  value: 'backOutLeft'
+}, {
+  name: 'backOutRight',
+  value: 'backOutRight'
+}, {
+  name: 'backOutUp',
+  value: 'backOutUp'
+}, {
+  name: 'bounceIn',
+  value: 'bounceIn'
+}, {
+  name: 'bounceInDown',
+  value: 'bounceInDown'
+}, {
+  name: 'bounceInLeft',
+  value: 'bounceInLeft'
+}, {
+  name: 'bounceInRight',
+  value: 'bounceInRight'
+}, {
+  name: 'bounceInUp',
+  value: 'bounceInUp'
+}, {
+  name: 'bounceOut',
+  value: 'bounceOut'
+}, {
+  name: 'bounceOutDown',
+  value: 'bounceOutDown'
+}, {
+  name: 'bounceOutLeft',
+  value: 'bounceOutLeft'
+}, {
+  name: 'bounceOutRight',
+  value: 'bounceOutRight'
+}, {
+  name: 'bounceOutUp',
+  value: 'bounceOutUp'
+}, {
+  name: 'fadeIn',
+  value: 'fadeIn'
+}, {
+  name: 'fadeInDown',
+  value: 'fadeInDown'
+}, {
+  name: 'fadeInDownBig',
+  value: 'fadeInDownBig'
+}, {
+  name: 'fadeInLeft',
+  value: 'fadeInLeft'
+}, {
+  name: 'fadeInLeftBig',
+  value: 'fadeInLeftBig'
+}, {
+  name: 'fadeInRight',
+  value: 'fadeInRight'
+}, {
+  name: 'fadeInRightBig',
+  value: 'fadeInRightBig'
+}, {
+  name: 'fadeInUp',
+  value: 'fadeInUp'
+}, {
+  name: 'fadeInUpBig',
+  value: 'fadeInUpBig'
+}, {
+  name: 'fadeInTopLeft',
+  value: 'fadeInTopLeft'
+}, {
+  name: 'fadeInTopRight',
+  value: 'fadeInTopRight'
+}, {
+  name: 'fadeInBottomLeft',
+  value: 'fadeInBottomLeft'
+}, {
+  name: 'fadeInBottomRight',
+  value: 'fadeInBottomRight'
+}, {
+  name: 'fadeOut',
+  value: 'fadeOut'
+}, {
+  name: 'fadeOutDown',
+  value: 'fadeOutDown'
+}, {
+  name: 'fadeOutDownBig',
+  value: 'fadeOutDownBig'
+}, {
+  name: 'fadeOutLeft',
+  value: 'fadeOutLeft'
+}, {
+  name: 'fadeOutLeftBig',
+  value: 'fadeOutLeftBig'
+}, {
+  name: 'fadeOutRight',
+  value: 'fadeOutRight'
+}, {
+  name: 'fadeOutRightBig',
+  value: 'fadeOutRightBig'
+}, {
+  name: 'fadeOutUp',
+  value: 'fadeOutUp'
+}, {
+  name: 'fadeOutUpBig',
+  value: 'fadeOutUpBig'
+}, {
+  name: 'fadeOutTopLeft',
+  value: 'fadeOutTopLeft'
+}, {
+  name: 'fadeOutTopRight',
+  value: 'fadeOutTopRight'
+}, {
+  name: 'fadeOutBottomRight',
+  value: 'fadeOutBottomRight'
+}, {
+  name: 'fadeOutBottomLeft',
+  value: 'fadeOutBottomLeft'
+}, {
+  name: 'flip',
+  value: 'flip'
+}, {
+  name: 'flipInX',
+  value: 'flipInX'
+}, {
+  name: 'flipInY',
+  value: 'flipInY'
+}, {
+  name: 'flipOutX',
+  value: 'flipOutX'
+}, {
+  name: 'flipOutY',
+  value: 'flipOutY'
+}, {
+  name: 'lightSpeedInRight',
+  value: 'lightSpeedInRight'
+}, {
+  name: 'lightSpeedInLeft',
+  value: 'lightSpeedInLeft'
+}, {
+  name: 'lightSpeedOutRight',
+  value: 'lightSpeedOutRight'
+}, {
+  name: 'lightSpeedOutLeft',
+  value: 'lightSpeedOutLeft'
+}, {
+  name: 'rotateIn',
+  value: 'rotateIn'
+}, {
+  name: 'rotateInDownLeft',
+  value: 'rotateInDownLeft'
+}, {
+  name: 'rotateInDownRight',
+  value: 'rotateInDownRight'
+}, {
+  name: 'rotateInUpLeft',
+  value: 'rotateInUpLeft'
+}, {
+  name: 'rotateInUpRight',
+  value: 'rotateInUpRight'
+}, {
+  name: 'rotateOut',
+  value: 'rotateOut'
+}, {
+  name: 'rotateOutDownLeft',
+  value: 'rotateOutDownLeft'
+}, {
+  name: 'rotateOutDownRight',
+  value: 'rotateOutDownRight'
+}, {
+  name: 'rotateOutUpLeft',
+  value: 'rotateOutUpLeft'
+}, {
+  name: 'rotateOutUpRight',
+  value: 'rotateOutUpRight'
+}, {
+  name: 'hinge',
+  value: 'hinge'
+}, {
+  name: 'jackInTheBox',
+  value: 'jackInTheBox'
+}, {
+  name: 'rollIn',
+  value: 'rollIn'
+}, {
+  name: 'rollOut',
+  value: 'rollOut'
+}, {
+  name: 'zoomIn',
+  value: 'zoomIn'
+}, {
+  name: 'zoomInDown',
+  value: 'zoomInDown'
+}, {
+  name: 'zoomInLeft',
+  value: 'zoomInLeft'
+}, {
+  name: 'zoomInRight',
+  value: 'zoomInRight'
+}, {
+  name: 'zoomInUp',
+  value: 'zoomInUp'
+}, {
+  name: 'zoomOut',
+  value: 'zoomOut'
+}, {
+  name: 'zoomOutDown',
+  value: 'zoomOutDown'
+}, {
+  name: 'zoomOutLeft',
+  value: 'zoomOutLeft'
+}, {
+  name: 'zoomOutRight',
+  value: 'zoomOutRight'
+}, {
+  name: 'zoomOutUp',
+  value: 'zoomOutUp'
+}, {
+  name: 'slideInDown',
+  value: 'slideInDown'
+}, {
+  name: 'slideInLeft',
+  value: 'slideInLeft'
+}, {
+  name: 'slideInRight',
+  value: 'slideInRight'
+}, {
+  name: 'slideInUp',
+  value: 'slideInUp'
+}, {
+  name: 'slideOutDown',
+  value: 'slideOutDown'
+}, {
+  name: 'slideOutLeft',
+  value: 'slideOutLeft'
+}, {
+  name: 'slideOutRight',
+  value: 'slideOutRight'
+}, {
+  name: 'slideOutUp',
+  value: 'slideOutUp'
+}]

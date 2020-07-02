@@ -17,6 +17,9 @@ export default {
       type: [String, Array],
       required: true
     },
+    /*
+    * 动画时长
+    * */
     duration: {
       type: Number
     },

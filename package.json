@@ -4,8 +4,8 @@
   "private": false,
   "scripts": {
     "dev": "vue-cli-service serve",
-    "build:example": "vue-cli-service build",
-    "build:se": "vue-cli-service build --config ./src/index.js",
+    "build-example": "vue-cli-service build --config ./examples/main.js",
+    "build-se": "vue-cli-service build --config ./src/index.js",
     "docs": "docsify serve docs",
     "lint": "vue-cli-service lint"
   },
@@ -27,6 +27,7 @@
   "dependencies": {
     "animate.css": "^4.1.0",
     "core-js": "^3.6.5",
+    "element-ui": "^2.13.2",
     "vue": "^2.6.11"
   },
   "devDependencies": {
