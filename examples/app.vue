@@ -1,16 +1,10 @@
 <template>
   <div id="app">
     <v-animation
-      :name="['zoomInDown']"
+      :name="['zoomInDown', 'swing', 'bounce', 'rubberBand']"
     >
       <img alt="Vue logo" src="./assets/logo.png">
       <h1 class="title">vAnimation</h1>
-    </v-animation>
-    <v-animation
-      :name="['bounce', 'swing']"
-      :duration="2"
-    >
-      v-animation
     </v-animation>
   </div>
 </template>
