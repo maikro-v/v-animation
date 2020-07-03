@@ -12,6 +12,7 @@
       </div>
     </div>
     <div class="suspend attr">
+<!--      <el-tag></el-tag>-->
       <el-form
         :model="forms"
         class="side__form"
@@ -48,41 +49,14 @@
         </el-form-item>
       </el-form>
     </div>
-    <div class="suspend type">
-      <div class="tag-wrap">
-        <el-tag
-          v-for="(item, index) in forms.name"
-          :key="index"
-          size="small"
-          closable
-          class="tag"
-          @close="handleCloseTag(index)"
-        >
-          {{ item }}
-        </el-tag>
-      </div>
-      <el-checkbox-group v-model="forms.name" @change="handleTypeChange">
-        <el-row>
-          <el-col
-            v-for="(item, index) in animationData"
-            :key="index"
-            :span="24"
-          >
-            <el-checkbox
-              :label="item.value"
-            >
-              {{ item.name }}
-            </el-checkbox>
-          </el-col>
-        </el-row>
-      </el-checkbox-group>
-    </div>
+    <type @on-change="onTypeChange"/>
   </div>
 </template>
 
 <script>
-import animationData from './data/animationData'
+import type from './components/type/index'
 export default {
+  components: { type },
   data() {
     return {
       forms: {
@@ -93,24 +67,12 @@ export default {
         infinite: false,
         direction: 'normal' // normal 默认值。动画应该正常播放。 alternate 动画应该轮流反向播放。
       },
-      playAnimation: [],
-      animationData
-    }
-  },
-  computed: {
-    hasInfinite() {
-      console.log(this.forms.count === 'infinite')
-      return this.forms.count === 'infinite'
+      playAnimation: []
     }
   },
   methods: {
-    handleCloseTag(index) {
-      this.forms.name.splice(index, 1)
-    },
-    handleTypeChange(row) {
-      this.playAnimation = []
-      this.playAnimation.push(...row)
-      console.log(row)
+    onTypeChange(e) {
+      this.playAnimation = e
     }
   }
 }
@@ -159,14 +121,6 @@ export default {
     width: 300px;
     right: 300px;
     top: 10px;
-  }
-  .type {
-    width: 280px;
-    right: 10px;
-    top: 10px;
-    bottom: 10px;
-    overflow-y: auto;
-    overflow-x: hidden;
   }
   .list {
     width: 100%;

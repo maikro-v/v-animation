@@ -44,8 +44,7 @@ export default {
   watch: {
     name: {
       handler(val) {
-        this.animations = []
-        this.animations.push(...this.createQueue())
+        this.animations = this.createQueue()
       },
       immediate: true
     },

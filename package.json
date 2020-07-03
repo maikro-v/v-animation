@@ -4,9 +4,9 @@
   "private": false,
   "scripts": {
     "dev": "vue-cli-service serve",
-    "build-example": "cross-env NODE_ENV=examples vue-cli-service build --config ./examples/index.js views",
-    "build-ui": "cross-env NODE_ENV=ui vue-cli-service build --config ./src/index.js",
-    "dev-docs": "docsify serve docs",
+    "build-example": "vue-cli-service build --config ./examples/index.js",
+    "build-package": "vue-cli-service build --target lib --name v-animation --dest main src/index.js",
+    "docs": "docsify serve docs",
     "lint": "vue-cli-service lint"
   },
   "license": "ISC",
