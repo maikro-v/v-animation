@@ -3,7 +3,7 @@ let outputDir = 'dist'
 let publicPath = '/'
 if (nodeEnv === 'examples') {
   outputDir = 'exampleDocs'
-  publicPath = '/exampleDocs'
+  publicPath = '/v-animation/exampleDocs'
 } else if (nodeEnv === 'ui') {
   outputDir = 'main'
 }
