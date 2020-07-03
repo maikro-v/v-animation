@@ -4,9 +4,9 @@
   "private": false,
   "scripts": {
     "dev": "vue-cli-service serve",
-    "build-example": "vue-cli-service build --config ./examples/main.js",
-    "build-se": "vue-cli-service build --config ./src/index.js",
-    "docs": "docsify serve docs",
+    "build-example": "cross-env NODE_ENV=examples vue-cli-service build --config ./examples/index.js views",
+    "build-ui": "cross-env NODE_ENV=ui vue-cli-service build --config ./src/index.js",
+    "dev-docs": "docsify serve docs",
     "lint": "vue-cli-service lint"
   },
   "license": "ISC",
@@ -36,6 +36,7 @@
     "@vue/cli-service": "~4.4.0",
     "@vue/eslint-config-standard": "^5.1.2",
     "babel-eslint": "^10.1.0",
+    "cross-env": "^7.0.2",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-node": "^11.1.0",
