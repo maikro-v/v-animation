@@ -1,5 +1,6 @@
+const { isDev } = require('./config')
 module.exports = {
-  publicPath: './',
+  publicPath: isDev ? './' : '/v-animation/index/',
   pages: {
     index: {
       entry: './examples/index.js',
