@@ -1,12 +1,10 @@
 <template>
   <suspend>
-    <template slot="title">动画</template>
+    <template slot="title">已选动画</template>
     <div
       v-for="(item, index) in animationData"
       :key="index"
       class="list"
-      :class="isChecked(item.value)"
-      @click="handleChecked(item)"
     >
       <div class="list__icon"></div>
       <p class="list__name">{{ item.name }}</p>
@@ -15,32 +13,15 @@
 </template>
 
 <script>
-import animationData from './data'
 import suspend from '../suspend'
 export default {
   components: { suspend },
   data() {
     return {
-      checkeds: [],
-      animationData,
-      menuList: ['复制']
+      animationData: []
     }
   },
   methods: {
-    isChecked(row) {
-      if (this.checkeds.includes(row)) {
-        return 'list_active'
-      }
-    },
-    handleChecked(row) {
-      const index = this.checkeds.indexOf(row.value)
-      if (index === -1) {
-        this.checkeds.push(row.value)
-      } else {
-        this.checkeds.splice(index, 1)
-      }
-      this.$emit('on-change', this.checkeds)
-    }
   }
 }
 </script>

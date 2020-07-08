@@ -11,52 +11,16 @@
         </v-animation>
       </div>
     </div>
-    <div class="suspend attr">
-<!--      <el-tag></el-tag>-->
-      <el-form
-        :model="forms"
-        class="side__form"
-        label-position="left"
-        label-width="80px"
-      >
-        <el-form-item label="时间:">
-          <el-slider v-model="forms.duration" :min="0" :max="10" :step="0.5" />
-        </el-form-item>
-        <el-form-item label="延迟:">
-          <el-slider v-model="forms.delay" :min="0" :max="10" :step="0.5" />
-        </el-form-item>
-        <el-form-item label="次数:">
-          <div class="count">
-            <span class="count__item">
-              <el-checkbox
-                v-model="forms.infinite"
-                border
-                size="mini"
-              >
-                无限播放
-              </el-checkbox>
-            </span>
-            <span v-show="!forms.infinite" class="count__item">
-              <el-input-number v-model="forms.count" controls-position="right" size="mini" style="width: 100%;"/>
-            </span>
-          </div>
-        </el-form-item>
-        <el-form-item label="反向播放:">
-          <el-radio-group v-model="forms.direction" size="mini">
-            <el-radio-button label="normal">正常播放</el-radio-button>
-            <el-radio-button label="alternate">反向播放</el-radio-button>
-          </el-radio-group>
-        </el-form-item>
-      </el-form>
-    </div>
-    <type @on-change="onTypeChange"/>
+    <attr class="attr-wrap" @on-change="onAttrChange" @on-copy="onCopy"/>
+    <type class="type-wrap" @on-change="onTypeChange" />
   </div>
 </template>
 
 <script>
-import type from './components/type/index'
+import type from './components/type'
+import attr from './components/attr'
 export default {
-  components: { type },
+  components: { type, attr },
   data() {
     return {
       forms: {
@@ -71,10 +35,40 @@ export default {
     }
   },
   methods: {
+    onCopy() {
+      if (this.playAnimation.length <= 0) {
+        return false
+      }
+      const textarea = document.createElement('textarea')
+      textarea.value = this.playAnimation.join(' ')
+      textarea.style.cssText = 'position: fixed;left:-10000px;top: -10000px;z-index: -1;'
+      textarea.value = this.playAnimation.join(' ')
+      document.body.appendChild(textarea)
+      textarea.select()
+      textarea.setSelectionRange(0, textarea.value.length)
+      const result = document.execCommand('Copy')
+      if (result) {
+        this.$notify.success('复制成功')
+      }
+      document.body.removeChild(textarea)
+    },
+    onAttrChange(e) {
+      console.log(e)
+    },
     onTypeChange(e) {
       this.playAnimation = e
     }
   }
+  // directives: {
+  //   copy: {
+  //     bind(el) {
+  //       console.log(el)
+  //     },
+  //     unbind(el) {
+  //       // el.removeEventListener('click')
+  //     }
+  //   }
+  // }
 }
 </script>
 
@@ -110,31 +104,15 @@ export default {
       margin-top: 20px;
     }
   }
-  .suspend {
-    position: fixed;
-    background: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .4);
-    border-radius: 6px;
-    padding: 10px;
-  }
-  .attr {
+  .attr-wrap {
     width: 300px;
     right: 300px;
     top: 10px;
   }
-  .list {
-    width: 100%;
-    display: block;
-  }
-  .count {
-    width: 100%;
-    &__item {
-      width: 50%;
-      display: inline-block;
-    }
-  }
-  .tag {
-    margin-right: 6px;
-    margin-bottom: 6px;
+  .type-wrap {
+    width: 280px;
+    right: 10px;
+    top: 10px;
+    bottom: 10px;
   }
 </style>
