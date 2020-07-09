@@ -1,24 +1,6 @@
-# v-animate
+# vue的动画组件
 
-## Project setup
-```
-yarn install
-```
+![alt demo](/examples/assets/demo.png)
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+**[预览效果](https://maikro-v.github.io/v-animation/index/index)**
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

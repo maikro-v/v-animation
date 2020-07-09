@@ -1,11 +1,12 @@
 {
   "name": "v-animation",
-  "version": "0.1.1",
+  "version": "0.2.1",
   "private": false,
+  "main": "./dist/v-animation.umd.min.js",
   "scripts": {
     "dev": "vue-cli-service serve",
     "build-example": "vue-cli-service build --config ./examples/index.js",
-    "build-package": "vue-cli-service build --target lib --name v-animation --dest main src/index.js",
+    "build-package": "vue-cli-service build --target lib --name v-animation --dest dist src/index.js",
     "docs": "docsify serve docs",
     "lint": "vue-cli-service lint"
   },
@@ -56,5 +57,15 @@
       "vue-cli-service lint",
       "git add"
     ]
-  }
+  },
+  "files": [
+    "dist/v-animation.common.js",
+    "dist/v-animation.common.js.map",
+    "dist/v-animation.umd.js",
+    "dist/v-animation.umd.js.map",
+    "dist/v-animation.umd.min.js",
+    "dist/v-animation.umd.min.js.map",
+    "dist/v-animation.css",
+    "package.json"
+  ]
 }
