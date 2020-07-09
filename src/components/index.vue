@@ -23,11 +23,31 @@ export default {
     duration: {
       type: Number
     },
+    /*
+    * 延迟
+    * */
     delay: {
       type: Number
     },
+    /*
+    * 播放次数
+    * */
     count: {
       type: Number
+    },
+    /*
+    * 是否无限播放，无限播放优先级高于播放次数
+    * */
+    infinite: {
+      type: Boolean
+    },
+    /*
+    * (未实现)
+    * 是否应该轮流反向播放动画
+    * */
+    direction: {
+      type: Number,
+      default: 0
     }
   },
   data() {
@@ -51,7 +71,10 @@ export default {
     animations: {
       handler(val) {
         this.$nextTick(() => {
-          this.runAllAnimation(val)
+          const cssText = this.$animate.style.cssText
+          this.runAllAnimation(val).then(() => {
+            this.$animate.style.cssText = cssText
+          })
         })
       },
       deep: true
@@ -72,6 +95,8 @@ export default {
         // 动画时长时间
         if (animation.duration) el.style.animationDuration = `${animation.duration}s`
         if (animation.delay) el.style.animationDelay = `${animation.delay}s`
+        if (animation.iterationCount) el.style.animationIterationCount = animation.iterationCount
+        if (animation.direction) el.style.animationDirection = animation.direction
         const resolveFun = () => {
           el.removeEventListener('animationend', resolveFun, false)
           el.addEventListener('animationcancel', resolveFun, false)
@@ -130,6 +155,16 @@ export default {
       if (this.delay) {
         obj.delay = this.delay
       }
+      if (this.infinite) {
+        obj.iterationCount = 'infinite'
+      } else if (this.count > 0) {
+        obj.iterationCount = this.count
+      }
+      // if (this.direction === 0) {
+      //   obj.direction = 'normal'
+      // } else if (this.direction === 1) {
+      //   obj.direction = 'alternate'
+      // }
       return obj
     }
   }

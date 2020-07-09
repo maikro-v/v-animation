@@ -28,12 +28,12 @@
             </span>
         </div>
       </el-form-item>
-      <el-form-item label="反向播放:">
-        <el-radio-group v-model="forms.direction" size="mini">
-          <el-radio-button label="normal">正常播放</el-radio-button>
-          <el-radio-button label="alternate">反向播放</el-radio-button>
-        </el-radio-group>
-      </el-form-item>
+<!--      <el-form-item label="反向播放:">-->
+<!--        <el-radio-group v-model="forms.direction" size="mini">-->
+<!--          <el-radio-button :label="0">正常播放</el-radio-button>-->
+<!--          <el-radio-button :label="1">反向播放</el-radio-button>-->
+<!--        </el-radio-group>-->
+<!--      </el-form-item>-->
       <el-form-item label="复制动画:">
         <el-button type="danger" size="small" @click="handleCopy">复制已选动画</el-button>
       </el-form-item>
@@ -48,12 +48,11 @@ export default {
   data() {
     return {
       forms: {
-        name: [],
         duration: 1.4,
         delay: 0,
         count: 1,
         infinite: false,
-        direction: 'normal' // normal 默认值。动画应该正常播放。 alternate 动画应该轮流反向播放。
+        direction: 0
       }
     }
   },

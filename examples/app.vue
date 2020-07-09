@@ -5,6 +5,10 @@
         <v-animation
           :name="playAnimation"
           :duration="forms.duration"
+          :delay="forms.delay"
+          :count="forms.count"
+          :infinite="forms.infinite"
+          :direction="forms.direction"
         >
           <img alt="VAnimation" src="./assets/logo.png" class="el__img">
           <h1 class="el__title">vAnimation</h1>
@@ -24,12 +28,11 @@ export default {
   data() {
     return {
       forms: {
-        name: [],
         duration: 1.4,
         delay: 0,
         count: 1,
         infinite: false,
-        direction: 'normal' // normal 默认值。动画应该正常播放。 alternate 动画应该轮流反向播放。
+        direction: 0 // 0正向播放 1反向播放
       },
       playAnimation: []
     }
@@ -53,10 +56,11 @@ export default {
       document.body.removeChild(textarea)
     },
     onAttrChange(e) {
-      console.log(e)
+      this.forms = { ...this.forms, ...e }
     },
     onTypeChange(e) {
-      this.playAnimation = e
+      this.playAnimation.length = 0
+      this.playAnimation.push(...e)
     }
   }
   // directives: {
