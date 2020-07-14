@@ -34,15 +34,18 @@ VAnimation 是一款便捷易使用的vue的动画组件，它集成了强大的
   </script>
 ```
 
-# props
-- #### <a href="#animationName">name - 动画名称</a>
-- #### <a href="#animationDuration">duration - 执行时长</a>
-- #### <a href="#animationDelay">delay - 延迟时长</a>
-- #### <a href="#animationCount">count - 执行次数</a>
-- #### <a href="#animationInfinite">infinite - 是否无限循环</a>
+### 属性 Attributes
+___
+| 属性 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+|<a href="#animationName">name</a>| 动画名称，可用数组方式设置多个 | Array/String | - |
+|<a href="#animationDuration">duration</a>| 执行时长 | Number | - |
+|<a href="#animationDelay">delay</a>| 延迟时长 | Number | - |
+|<a href="#animationCount">count</a>| 执行次数，如果设置了infinite="true"，此属性无效 | Number | 1 |
+|<a href="#animationInfinite">infinite</a>| 是否无限循环 | Boolean | false |
 
 ## name 设置动画名称 <a id="animationName"></a>
-#### 1. 使用字符串
+#### 1. 单个动画
 ```vue
 <template>
   <v-animation name="bounce">
@@ -51,7 +54,7 @@ VAnimation 是一款便捷易使用的vue的动画组件，它集成了强大的
 </template>
 ```
 
-#### 2. 使用数组
+#### 2. 多个动画
 ```vue
 <template>
   <v-animation :name="animationName">
@@ -62,22 +65,32 @@ VAnimation 是一款便捷易使用的vue的动画组件，它集成了强大的
 export default {
   data() {
     return {
-      animationName: ['bounce']
+      animationName: ['bounce', 'backInUp']
     } 
   }
 }
 </script>
 ```
 
-## duration 设置动画时长，单位 <a id="animationDuration"></a>
+#### 3. 多个动画定义其它属性，优先级高于属性方式
 ```vue
 <template>
-  <v-animation
-    name="bounce"
-    :duration="2"
-  >
+  <v-animation :name="animationName">
     v-animation
   </v-animation>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      animationName: [{
+        name: 'bounce',
+        duration: 3,
+        infinite: true
+      }]
+    } 
+  }
+}
+</script>
 ```
 
