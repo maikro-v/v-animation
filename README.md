@@ -34,8 +34,9 @@ VAnimation 是一款便捷易使用的vue的动画组件，它集成了强大的
   </script>
 ```
 
-### 属性 Attributes
-___
+## 属性 Attributes
+具体使用方法看[详细实例](#example)
+
 | 属性 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
 |<a href="#animationName">name</a>| 动画名称，可用数组方式设置多个 | Array/String | - |
@@ -44,7 +45,7 @@ ___
 |<a href="#animationCount">count</a>| 执行次数，如果设置了infinite="true"，此属性无效 | Number | 1 |
 |<a href="#animationInfinite">infinite</a>| 是否无限循环 | Boolean | false |
 
-## name 设置动画名称 <a id="animationName"></a>
+## 示例 <a id="example"></a>
 #### 1. 单个动画
 ```vue
 <template>
