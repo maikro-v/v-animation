@@ -4,8 +4,9 @@
     <div
       v-for="(item, index) in animationData"
       :key="index"
-      class="list"
       :class="isChecked(item.value)"
+      :title="item.name"
+      class="list"
       @click="handleChecked(item)"
     >
       <div class="list__icon"></div>
@@ -19,11 +20,25 @@ import animationData from './data'
 import suspend from '../suspend'
 export default {
   components: { suspend },
+  props: {
+    value: {
+      type: Array,
+      default() {
+        return []
+      }
+    }
+  },
   data() {
     return {
       checkeds: [],
       animationData,
-      menuList: ['复制']
+      menuList: ['复制'],
+      isInit: false
+    }
+  },
+  mounted() {
+    if (this.value && this.value.length) {
+      this.checkeds.push(...this.value)
     }
   },
   methods: {

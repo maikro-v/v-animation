@@ -11,12 +11,41 @@
           :direction="forms.direction"
         >
           <img alt="VAnimation" src="./assets/logo.png" class="el__img">
-          <h1 class="el__title">vAnimation</h1>
+        </v-animation>
+        <v-animation :name="['fadeInLeft']" :delay="2">
+          <h1 class="el__title">v</h1>
+        </v-animation>
+        <v-animation name="fadeInTopLeft" :delay="1.8">
+          <h1 class="el__title">A</h1>
+        </v-animation>
+        <v-animation name="backInDown" :delay="1.6">
+          <h1 class="el__title">n</h1>
+        </v-animation>
+        <v-animation name="zoomInRight" :delay="1" :duration="2">
+          <h1 class="el__title">i</h1>
+        </v-animation>
+        <v-animation name="zoomInUp" :delay="1" :duration="2">
+          <h1 class="el__title">m</h1>
+        </v-animation>
+        <v-animation name="zoomInDown" :delay="1" :duration="2">
+          <h1 class="el__title">a</h1>
+        </v-animation>
+        <v-animation name="zoomInLeft" :delay="1" :duration="2">
+          <h1 class="el__title">t</h1>
+        </v-animation>
+        <v-animation name="bounceIn" :delay="1">
+          <h1 class="el__title">i</h1>
+        </v-animation>
+        <v-animation name="bounceInDown" :delay=".4">
+          <h1 class="el__title">o</h1>
+        </v-animation>
+        <v-animation name="bounceInLeft" :delay="0">
+          <h1 class="el__title">n</h1>
         </v-animation>
       </div>
     </div>
     <attr class="attr-wrap" @on-change="onAttrChange" @on-copy="onCopy"/>
-    <type class="type-wrap" @on-change="onTypeChange" />
+    <type :value="playAnimation" class="type-wrap" @on-change="onTypeChange" />
   </div>
 </template>
 
@@ -28,13 +57,13 @@ export default {
   data() {
     return {
       forms: {
-        duration: 1.4,
-        delay: 0,
+        duration: 1,
+        delay: 2.8,
         count: 1,
         infinite: false,
         direction: 0 // 0正向播放 1反向播放
       },
-      playAnimation: []
+      playAnimation: ['bounceIn']
     }
   },
   methods: {

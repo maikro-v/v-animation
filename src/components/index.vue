@@ -1,5 +1,5 @@
 <template>
-  <div :ref="animationRef" class="animate__animated">
+  <div :ref="animationRef" class="v-animation animate__animated">
     <slot />
   </div>
 </template>
@@ -14,8 +14,7 @@ export default {
     * 动画名称或一个数组，列如：'bounce' | ['bounce'] | [ { name: 'bounce', duration: '2s' } ]
     * */
     name: {
-      type: [String, Array],
-      required: true
+      type: [String, Array]
     },
     /*
     * 动画时长
@@ -65,22 +64,26 @@ export default {
     name: {
       handler(val) {
         this.animations = this.createQueue()
+        this.handlePlay(this.animations)
       },
       immediate: true
     },
     animations: {
       handler(val) {
-        this.$nextTick(() => {
-          const cssText = this.$animate.style.cssText
-          this.runAllAnimation(val).then(() => {
-            this.$animate.style.cssText = cssText
-          })
-        })
+        this.handlePlay(val)
       },
       deep: true
     }
   },
   methods: {
+    handlePlay(val = []) {
+      this.$nextTick(() => {
+        const cssText = this.$animate.style.cssText
+        this.runAllAnimation(val).then(() => {
+          this.$animate.style.cssText = cssText
+        })
+      })
+    },
     /**
      * 执行动画
      * @param el 播放动画的元素
@@ -126,7 +129,7 @@ export default {
         obj = Object.assign(this.createAnimationAttr(), {
           name: animation
         })
-        this.animationName.push(obj)
+        arr.push(obj)
       } else if (isArray(animation)) {
         animation.forEach(item => {
           let obj = this.createAnimationAttr()
@@ -172,5 +175,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+  .v-animation {
+    display: inline-block;
+  }
 </style>
