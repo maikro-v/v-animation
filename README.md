@@ -95,3 +95,10 @@ export default {
 </script>
 ```
 
+## Issues
+[https://github.com/maikro-v/v-animation/issues](https://github.com/maikro-v/v-animation/issues)
+
+## License
+[MIT](https://opensource.org/licenses/MIT)  
+
+Copyright (c) 2020-present, Maikro
