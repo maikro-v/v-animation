@@ -10,7 +10,7 @@
     "docs": "docsify serve docs",
     "lint": "vue-cli-service lint",
     "push": "git push && git push gitee",
-    "push-example": "git subtree push --prefix demo origin gh-pages && git subtree push --prefix demo gitee gh-pages"
+    "push:example": "git subtree push --prefix demo origin gh-pages && git subtree push --prefix demo gitee gh-pages"
   },
   "license": "ISC",
   "author": {
