@@ -9,8 +9,10 @@
           :count="forms.count"
           :infinite="forms.infinite"
           :direction="forms.direction"
+          class="logo"
         >
-          <img alt="VAnimation" src="./assets/logo.png" class="el__img">
+          <img alt="VAnimation" src="./assets/logo.png" class="el__img_absolute">
+          <img alt="VAnimation" src="./assets/logo.png" class="el__img_shadow">
         </v-animation>
         <v-animation :name="['fadeInLeft']" :delay="2">
           <h1 class="el__title">v</h1>
@@ -115,13 +117,16 @@ export default {
     width: 100vw;
     height: 100vh;
     display: flex;
-    background: #eaeaea;
+    background: #3a3a3a;
   }
   .views {
     position: relative;
     overflow: hidden;
     flex: 1;
     margin-right: 400px;
+  }
+  .logo {
+    position: relative;
   }
   .el {
     width: 340px;
@@ -130,11 +135,24 @@ export default {
     &__img {
       width: 100%;
       display: block;
+      &_shadow {
+        filter: blur(100px);
+      }
+      &_absolute {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+      }
     }
     &__title {
       font-size: 50px;
       text-align: center;
       margin-top: 20px;
+      color: white;
+      text-shadow: 4px 2px 6px rgba(255, 255, 255, .4);
+      margin-left: 2px;
     }
   }
   .attr-wrap {
