@@ -4,7 +4,7 @@
 
 # 安装
 ```shell
-    npm install v-animation -S
+  npm install v-animation -S
 ```
 
 # VAnimation是什么

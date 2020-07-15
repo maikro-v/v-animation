@@ -8,7 +8,9 @@
     "build-example": "vue-cli-service build --config ./examples/index.js",
     "build-package": "vue-cli-service build --target lib --name v-animation --dest dist src/index.js",
     "docs": "docsify serve docs",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "push": "git subtree push --prefix demo origin gh-pages",
+    "push-gitee": "git subtree push --prefix demo gitee gh-pages"
   },
   "license": "ISC",
   "author": {
