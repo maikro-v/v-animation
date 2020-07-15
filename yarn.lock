@@ -8922,6 +8922,16 @@ uuid@^3.3.2, uuid@^3.4.0:
   resolved "https://registry.npm.taobao.org/uuid/download/uuid-3.4.0.tgz?cache=0&sync_timestamp=1592944143460&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fuuid%2Fdownload%2Fuuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha1-sj5DWK+oogL+ehAK8fX4g/AgB+4=
 
+v-animation@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.npmjs.org/v-animation/-/v-animation-0.2.1.tgz#4e8b233872dea856cdc1936138e55242d3156c4a"
+  integrity sha512-QYGlAMc0pUSB4wPZYjg/s2igk311cxqJyZl8pMAe2NRQbbFZy/m11lMc9qjezVscREpcshHye0dtXX0gBsBNuA==
+  dependencies:
+    animate.css "^4.1.0"
+    core-js "^3.6.5"
+    element-ui "^2.13.2"
+    vue "^2.6.11"
+
 v8-compile-cache@^2.0.3:
   version "2.1.1"
   resolved "https://registry.npm.taobao.org/v8-compile-cache/download/v8-compile-cache-2.1.1.tgz#54bc3cdd43317bca91e35dcaf305b1a7237de745"

@@ -1,6 +1,6 @@
 {
   "name": "v-animation",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "private": false,
   "main": "./lib/v-animation.umd.min.js",
   "scripts": {
@@ -31,6 +31,7 @@
     "animate.css": "^4.1.0",
     "core-js": "^3.6.5",
     "element-ui": "^2.13.2",
+    "v-animation": "^0.2.1",
     "vue": "^2.6.11"
   },
   "devDependencies": {
@@ -61,13 +62,13 @@
     ]
   },
   "files": [
-    "dist/v-animation.common.js",
-    "dist/v-animation.common.js.map",
-    "dist/v-animation.umd.js",
-    "dist/v-animation.umd.js.map",
-    "dist/v-animation.umd.min.js",
-    "dist/v-animation.umd.min.js.map",
-    "dist/v-animation.css",
+    "lib/v-animation.common.js",
+    "lib/v-animation.common.js.map",
+    "lib/v-animation.umd.js",
+    "lib/v-animation.umd.js.map",
+    "lib/v-animation.umd.min.js",
+    "lib/v-animation.umd.min.js.map",
+    "lib/v-animation.css",
     "package.json"
   ]
 }
