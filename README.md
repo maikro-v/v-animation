@@ -11,7 +11,7 @@
 VAnimation 是一款便捷易使用的vue的动画组件，它集成了强大的预设css3动画库[amiante.css](https://animate.style)。
 
 # 效果预览
-[预览链接](https://maikro-v.github.io/v-animation/index/index)
+## [预览效果](http://maikro.gitee.io/v-animation)
 
 # 注册组件
 ### 1. 全局注册
