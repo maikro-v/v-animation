@@ -8932,6 +8932,17 @@ v-animation@^0.2.1:
     element-ui "^2.13.2"
     vue "^2.6.11"
 
+v-animation@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.npmjs.org/v-animation/-/v-animation-0.2.2.tgz#b119765a6a465744e35da7d93cc34e77cda10077"
+  integrity sha512-GzbgyiwUMlLf71hAHbAhSlKH1kR7dITrNwMYP+aCy2fB/x/HVKLhs6JIffhvBqvF8/wFYuTH0Zl+M03cxeuuXA==
+  dependencies:
+    animate.css "^4.1.0"
+    core-js "^3.6.5"
+    element-ui "^2.13.2"
+    v-animation "^0.2.1"
+    vue "^2.6.11"
+
 v8-compile-cache@^2.0.3:
   version "2.1.1"
   resolved "https://registry.npm.taobao.org/v8-compile-cache/download/v8-compile-cache-2.1.1.tgz#54bc3cdd43317bca91e35dcaf305b1a7237de745"

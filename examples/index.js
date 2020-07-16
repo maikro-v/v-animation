@@ -2,8 +2,7 @@ import Vue from 'vue'
 import App from './app.vue'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-import VAnimation from 'v-animation'
-import 'v-animation/dist/v-animation.css'
+import VAnimation from '../src'
 
 Vue.use(VAnimation)
 Vue.use(ElementUI)
