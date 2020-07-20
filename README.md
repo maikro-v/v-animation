@@ -1,6 +1,6 @@
 # v-animation
 
-![alt demo](/examples/assets/demo.png)
+![alt demo](http://maikro.cn/upload/cfacdbf0-c96a-11ea-99fd-151b281bc120.png)
 
 # 安装
 ```shell
